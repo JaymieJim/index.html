@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jerick Mauel Jimenez" />
+    <meta name="description" content="Resume" />
+    <meta name="keywords" content="Resume" />
+    <title>Resume</title>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            font-family: Helvetica;
+        }
+
+        a,
+        header {
+            color: black;
+            text-decoration: none;
+            font-size: x-large;
+            
+        }
+
+     
+    
+        header {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        article {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: rgb(21, 192, 47);
+        }
+        p {
+background-color: rgba(2, 2, 179, 0.319);
+        }
+div{
+    text-align: center;
+}
+    
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+
+
+            <nav>
+                <div>
+                    <script>
+                        var textStrings = {
+                            "Jerick": {
+                                "Profile": "<b>About me</b> <br> A graduate with a love and passion for technology. An adaptable team player who works well in a fair time constraint environment. Reliable, fast learner, and focuses on quality over quantity. Ready to make a difference in everywhere he goes.<br><br><hr> <b>Contact</b> <br> +63955 440 3511 <br> 834 Imperio St. San Jose San Miguel Bulacan <br> jerickmanuel03@gmail.com Contact",
+                                "Skills": "<ul><b>Expertise</b><li>Technical Proficiency</li> <li>Website Developing</li> <li>Fast-learner</li> <li>Programming</li> <li>Problem-Solving</li> </ul> <hr> <b>Language</b><br>Filipino -----o--- <br> English -------o- ",
+                                "Background": "<b>Experience</b> <br> <br> <b>Visual Studio Code [Present]</b> <br>  Relearning the three primary languages which are HTML, CSS, and Javascript as well as learning new codes in each language <br> <br> <b>Cisco Packet Tracer [2024]</b><br> Learned the basics of Cisco Packet Tracer.  <ul><b>Python [2023]</b> <br> Learned coding (Part-time)<li>Developed coding skills</li> <li>Data analysis</li> <li>Web designer</li> <li>Scripting</li></ul> <br> <b>Art Designer [2020]</b> <br> Made designs for trinkets such as mugs and cups. <br><br> <hr> <b>Education</b> <br> San Miguel National High School <br> <i>Graduated in 2022</i> <br><br> Far Eastern University High School <br> <i>2022-Present</i>"
+                            }
+                        };
+                    
+                        function showhide(element) {
+                            reset();
+                            var id = element.id;
+                            var author = "Jerick";
+                            var flag = document.getElementById('content').innerHTML == textStrings[author][id];
+                            document.getElementById('content').innerHTML = flag ? "" : textStrings[author][id];
+                            element.innerHTML = flag ? id : "hide " + id;
+                        }
+                    
+                        function reset() {
+                            for (var k in textStrings["Jerick"]) {
+                                document.getElementById(k).innerHTML = k;
+                            }
+                        }
+                    
+                        function resetJerick() {
+                            document.getElementById('content').innerHTML = "";
+                            reset();
+                        }
+                    </script>
+                    
+                    <div style="display:inline">
+                        <button type="button" id="Profile" onclick="showhide(this)">Profile</button>
+                        <button type="button" id="Skills" onclick="showhide(this)">Skills</button>
+                        <button type="button" id="Background" onclick="showhide(this)">Background</button>
+                    </div>
+                    <div style="display: block;">
+                        <p id="content">Resume<br><img src="2x2 Pic.jpg" alt="Profile Picture"/><br>Jerick Manuel Jimenez <br> Student</p>
+                    </div>
+                    
+                </nav>
+                        
+                    </body>
+</html>
